@@ -1,5 +1,5 @@
 import "./cardStyle.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TodoListInfo, TodoList } from "../TodoLIst/todoList";
 
 interface CardInfo {
@@ -13,7 +13,7 @@ export default function Card(userCard: CardInfo): JSX.Element {
   const [check, setCheck] = useState<boolean>(false);
 
   const handlerClick = async (): Promise<void> => {
-    setCheck(true);
+    setCheck(!check);
     try {
       const result = await fetch(
         "https://jsonplaceholder.typicode.com/todos?userId=" + userCard.id

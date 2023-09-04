@@ -1,11 +1,11 @@
 import "./App.css";
-import { Example } from "./components/Example/Example";
 import UsersFromServer from "./components/Users/users";
+import Timer from "./components/Timer/timer";
 
 function App() {
   return (
     <>
-      <Example />
+      <Timer />
       <UsersFromServer />
     </>
   );
